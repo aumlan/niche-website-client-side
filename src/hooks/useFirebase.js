@@ -43,9 +43,19 @@ const useFirebase = () => {
     }, 5000);
   }, [error]);
 
-  if (user){
-    checkAdmin(user.email);
-  }
+  // if (user){
+  //   checkAdmin(user.email);
+  //
+  // }
+
+  useEffect(()=>{
+    if (user){
+      console.log(user.email);
+        checkAdmin(user.email);
+
+      }
+  },[])
+
   // google sign in
   function signInWithGoogle(location, history) {
     // return signInWithPopup(auth, googleProvider);

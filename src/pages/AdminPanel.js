@@ -33,7 +33,7 @@ const AdminPanel = () => {
                 console.log(allCourses);
 
             });
-    }, [allCourses]);
+    }, []);
 
     function removeProduct(id) {
         console.log('remove called');
@@ -48,7 +48,6 @@ const AdminPanel = () => {
                         (course) => course._id !== id
                     );
                     setAllCourses(selectAfterRemove);
-                    console.log(courses);
                 } else {
                     console.log(data);
                     alert("something went wrong!!");
